@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=5 python evaluate_phrase_grounding.py --model_name our_medclip \
+    --ckpt_path /home/fywang/Documents/CXRSeg/logs/medclip/ckpts/MedCLIP_2024_04_30_12_11_00/epoch=8-step=3780.ckpt
