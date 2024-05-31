@@ -13,7 +13,7 @@ from dcxfm.datasets.transforms import get_transforms, get_bbox_transforms
 from dcxfm.datasets.cxr_datasets import CheXlocalize_dataset, NIH_Localization_Dataset, VinBrain_Dataset, \
     RSNA_Pneumonia_Dataset, SIIM_Pneumothorax_Dataset, MergeDataset, CANDID_PTX_Dataset, MS_CXR_Dataset, \
     COVID_Rural_Dataset
-from dcxfm.datasets.medclip_datasets import MedCLIP_Pretrain_Dataset
+from dcxfm.datasets.sdmp_datasets import MedCLIP_Pretrain_Dataset
 import ipdb
 
 '''

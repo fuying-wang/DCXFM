@@ -16,7 +16,7 @@ from dcxfm.utils.constants import CHEXPERT_COMPETITION_TASKS, CHEXPERT_TASKS, CH
 import ipdb
 
 
-class MedCLIP_Pretrain_Dataset(BaseDataset):
+class SDMP_Pretrain_Dataset(BaseDataset):
     '''
     The main dataset class for MedCLIP pretraining.
     '''

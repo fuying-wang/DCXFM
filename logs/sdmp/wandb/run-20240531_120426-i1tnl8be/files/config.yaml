@@ -1,0 +1,176 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.18
+    cli_version: 0.15.8
+    framework: huggingface
+    huggingface_version: 4.37.0
+    is_jupyter_run: false
+    is_kaggle_kernel: true
+    start_time: 1717128266.807403
+    t:
+      1:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 43
+      - 49
+      - 50
+      - 51
+      - 53
+      - 55
+      - 63
+      - 74
+      - 80
+      2:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 43
+      - 49
+      - 50
+      - 51
+      - 53
+      - 55
+      - 63
+      - 74
+      - 80
+      3:
+      - 7
+      - 13
+      - 23
+      4: 3.9.18
+      5: 0.15.8
+      6: 4.37.0
+      8:
+      - 2
+      - 5
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+vision_model_name:
+  desc: null
+  value: resnet50
+text_model_name:
+  desc: null
+  value: microsoft/BiomedVLP-CXR-BERT-general
+dataset_dir:
+  desc: null
+  value: /disk1/fywang/CXR_dataset
+dataset_list:
+  desc: null
+  value:
+  - mimic-cxr
+logit_scale_init_value:
+  desc: null
+  value: 0.07
+train_data_pct:
+  desc: null
+  value: 0.2
+loss_type:
+  desc: null
+  value: soft_cont
+prompt_ensemble:
+  desc: null
+  value: true
+imagesize:
+  desc: null
+  value: 512
+proj_dim:
+  desc: null
+  value: 128
+use_patch_cont:
+  desc: null
+  value: false
+use_i2t_loss:
+  desc: null
+  value: true
+use_self_distil_loss:
+  desc: null
+  value: true
+use_local_loss:
+  desc: null
+  value: true
+global_crops_number:
+  desc: null
+  value: 2
+local_crops_number:
+  desc: null
+  value: 4
+global_crops_size:
+  desc: null
+  value: 512
+local_crops_size:
+  desc: null
+  value: 224
+batch_size:
+  desc: null
+  value: 24
+num_workers:
+  desc: null
+  value: 4
+encoder_momentum:
+  desc: null
+  value: 0.994
+center_momentum:
+  desc: null
+  value: 0.9
+teacher_temp:
+  desc: null
+  value: 0.07
+teacher_patch_temp:
+  desc: null
+  value: 0.07
+student_temp:
+  desc: null
+  value: 0.07
+patch_cont_temp:
+  desc: null
+  value: 0.1
+lambda1:
+  desc: null
+  value: 1.0
+lambda2:
+  desc: null
+  value: 1.0
+lambda3:
+  desc: null
+  value: 2.0
+lr:
+  desc: null
+  value: 2.0e-05
+weight_decay:
+  desc: null
+  value: 0.0001
+max_epochs:
+  desc: null
+  value: 50
+num_devices:
+  desc: null
+  value: 4
+accumulate_grad_batches:
+  desc: null
+  value: 1
+model_name:
+  desc: null
+  value: sdmp
+seed:
+  desc: null
+  value: 42
+ckpt_path:
+  desc: null
+  value: ''
+eval_only:
+  desc: null
+  value: false
+local_loss_weight:
+  desc: null
+  value: 1.0
+exp_log_dir:
+  desc: null
+  value: /home/fywang/Documents/DCXFM/scripts/../data/medclip/SDMP_2024_05_31_12_03_10/exp_logs

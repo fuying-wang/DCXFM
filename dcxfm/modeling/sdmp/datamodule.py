@@ -3,9 +3,9 @@ from typing import List
 import ipdb
 from torch.utils.data import DataLoader
 from lightning import LightningDataModule
-from dcxfm.datasets.medclip_datasets import MedCLIP_Pretrain_Dataset
+from dcxfm.datasets.sdmp_datasets import SDMP_Pretrain_Dataset
 from dcxfm.datasets.transforms import get_dino_transforms, get_transforms
-from dcxfm.datasets.medclip_datasets import ImageTextContrastiveCollator, ZeroShotImageDataset, ZeroShotImageCollator
+from dcxfm.datasets.sdmp_datasets import ImageTextContrastiveCollator, ZeroShotImageDataset, ZeroShotImageCollator
 from dcxfm.utils.constants import CHEXPERT_COMPETITION_TASKS
 
 
@@ -37,7 +37,7 @@ class SDMPDataModule(LightningDataModule):
             local_crops_number=self.local_crops_number,
             is_train=True)
 
-        train_dataset = MedCLIP_Pretrain_Dataset(
+        train_dataset = SDMP_Pretrain_Dataset(
             split="train",
             bert_type=self.bert_type,
             dataset_dir=self.dataset_dir,
@@ -69,7 +69,7 @@ class SDMPDataModule(LightningDataModule):
             local_crops_number=self.local_crops_number,
             is_train=False)
 
-        val_dataset = MedCLIP_Pretrain_Dataset(
+        val_dataset = SDMP_Pretrain_Dataset(
             split="val",
             bert_type=self.bert_type,
             dataset_dir=self.dataset_dir,
@@ -107,15 +107,8 @@ class SDMPDataModule(LightningDataModule):
             imgtransform=transform
         )
 
-        # pos_prompts = generate_class_prompts(
-        #     CHEXPERT_COMPETITION_TASKS, mode="pos")
-        # neg_prompts = generate_class_prompts(
-        #     CHEXPERT_COMPETITION_TASKS, mode="neg")
         test_collate_fn = ZeroShotImageCollator(
             mode="multiclass",
-            # bert_type=self.bert_type,
-            # pos_prompts=pos_prompts,
-            # neg_prompts=neg_prompts
         )
         testloader = DataLoader(
             test_data,
