@@ -17,13 +17,8 @@ You are a radiology assistant, skilled in providing radiology knowledge. Please 
 '''
 
 client = OpenAI(
-    api_key="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"
+    api_key="xxxxxxxxx"
 )
-
-'''
-API-Key:
-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
-'''
 
 def return_top_5_possible_observations(pathology: str):
     ''' Return top 5 observations from GPT4.''' 
