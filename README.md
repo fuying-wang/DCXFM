@@ -34,3 +34,6 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python train_net.py --num-gpus 4 --config-file ../c
 ### Evaluation
 
 Please check `scripts/run_phrase_grounding.sh`, `scripts/run_seg.sh`, `scripts/run_cls.sh`.
+
+TODO:
+- [ ] update benchmark description
